@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skólanámskrá Vallaskóla</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#fcfbf9] min-h-screen text-slate-800 font-sans p-4 md:p-8">
+
+  <!-- HAUS / LÓGÓ OG TITILL -->
+  <header class="max-w-4xl mx-auto text-center py-10 space-y-4">
+    <!-- Lógó Vallaskóla (Hægt að skipta út img-slóðinni ef til er opinbert merki) -->
+    <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-emerald-600 text-white font-extrabold text-2xl shadow-md border border-emerald-500/20">
+      V
+    </div>
+    
+    <div class="space-y-1">
+      <span class="text-xs font-semibold uppercase tracking-widest text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">Vallaskóli</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight pt-2">Skólanámskrá</h1>
+      <p class="text-sm text-slate-500 max-w-md mx-auto pt-1">
+        Aðalnámskrá, markmið, námsmat og skipulag kennslu fyrir alla árganga og stoðþjónustu Vallaskóla.
+      </p>
+    </div>
+  </header>
+
+  <!-- MEGINMÁL - FLÍSAGRID -->
+  <main class="max-w-4xl mx-auto mb-16">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" id="tilesContainer">
+      <!-- Flísarnar myndast sjálfkrafa hér úr JavaScript -->
+    </div>
+  </main>
+
+  <!-- POP-UP GLUGGI FYRIR ÍTARLEGRA EFNI -->
+  <div id="modal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 md:p-8 shadow-xl relative border border-slate-100 max-h-[85vh] flex flex-col">
+      <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 font-bold text-lg p-1 transition">✕</button>
+      
+      <div class="flex items-center gap-3 mb-4">
+        <span id="modalIcon" class="text-3xl"></span>
+        <h3 id="modalTitle" class="text-xl font-bold text-slate-900"></h3>
+      </div>
+      
+      <div id="modalContent" class="text-sm text-slate-600 overflow-y-auto space-y-4 pr-1 flex-1"></div>
+      
+      <button onclick="closeModal()" class="w-full mt-6 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold transition">Loka glugga</button>
+    </div>
+  </div>
+
+  <script>
+    // Skilgreining á öllum flísunum
+    const TILES = [
+      { id: '1', title: '1. árgangur', icon: '🌱', desc: 'Skólanámskrá og áherslur í 1. árgangi Vallaskóla.' },
+      { id: '2', title: '2. árgangur', icon: '🍃', desc: 'Skólanámskrá og áherslur í 2. árgangi Vallaskóla.' },
+      { id: '3', title: '3. árgangur', icon: '🌿', desc: 'Skólanámskrá og áherslur í 3. árgangi Vallaskóla.' },
+      { id: '4', title: '4. árgangur', icon: '☘️', desc: 'Skólanámskrá og áherslur í 4. árgangi Vallaskóla.' },
+      { id: '5', title: '5. árgangur', icon: '🍀', desc: 'Skólanámskrá og áherslur í 5. árgangi Vallaskóla.' },
+      { id: '6', title: '6. árgangur', icon: '🌲', desc: 'Skólanámskrá og áherslur í 6. árgangi Vallaskóla.' },
+      { id: '7', title: '7. árgangur', icon: '🌳', desc: 'Skólanámskrá og áherslur í 7. árgangi Vallaskóla.' },
+      { id: '8', title: '8. árgangur', icon: '🎓', desc: 'Skólanámskrá og áherslur í 8. árgangi Vallaskóla.' },
+      { id: '9', title: '9. árgangur', icon: '📘', desc: 'Skólanámskrá og áherslur í 9. árgangi Vallaskóla.' },
+      { id: '10', title: '10. árgangur', icon: '🚀', desc: 'Skólanámskrá og áherslur í 10. árgangi Vallaskóla.' },
+      { id: 'isat', title: 'ÍSAT', icon: '🌍', desc: 'Íslenska sem annað mál — markmið, stuðningur og kennsluáætlanir.' },
+      { id: 'stod', title: 'Stoðþjónusta', icon: '🤝', desc: 'Sérkennsla, námsráðgjöf og samþættur stuðningur við nemendur.' }
+    ];
+
+    function renderTiles() {
+      const container = document.getElementById('tilesContainer');
+      container.innerHTML = TILES.map(tile => `
+        <div onclick="openTile('${tile.id}')" class="p-6 bg-white border border-slate-200/70 rounded-2xl hover:border-emerald-500 hover:shadow-md hover:-translate-y-0.5 transition cursor-pointer text-center group flex flex-col items-center justify-center space-y-3">
+          <span class="text-3xl group-hover:scale-110 transition-transform duration-200">${tile.icon}</span>
+          <h2 class="text-xs font-bold text-slate-800 group-hover:text-emerald-700 transition">${tile.title}</h2>
+        </div>
+      `).join('');
+    }
+
+    function openTile(id) {
+      const tile = TILES.find(t => t.id === id);
+      if (!tile) return;
+
+      document.getElementById('modalIcon').innerText = tile.icon;
+      document.getElementById('modalTitle').innerText = tile.title;
+      document.getElementById('modalContent').innerHTML = `
+        <p class="text-slate-600 leading-relaxed">${tile.desc}</p>
+        
+        <div class="p-4 bg-emerald-50/50 border border-emerald-100 rounded-2xl mt-4 space-y-2">
+          <h4 class="font-bold text-emerald-950 text-xs uppercase tracking-wider">Hvað á að vera hér?</h4>
+          <ul class="list-disc pl-4 text-xs text-slate-600 space-y-1">
+            <li>Námsáætlanir og fagafgreinar</li>
+            <li>Hæfniviðmið og námsmatsviðmið</li>
+            <li>Beinir tenglar á PDF skjöl eða Drive námskrá</li>
+          </ul>
+        </div>
+      `;
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    // Birta flísarnar
+    renderTiles();
+  </script>
+</body>
+</html>
