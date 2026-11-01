@@ -1,0 +1,2 @@
+# skolanamskra
+Skólanámskrár Vallaskóla
