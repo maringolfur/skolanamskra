@@ -26,7 +26,7 @@
         Skólanámskrá Vallaskóla
       </h1>
       <p class="text-sm text-slate-500 max-w-md mx-auto pt-1">
-        Aðalnámskrá, markmið, námsmat og skipulag kennslu fyrir alla árganga og stoðþjónustu skólans.
+        Aðalnámskrá, markmið, námsmat og skipulag kennslu fyrir alla árganga, fagsvið og stoðþjónustu skólans.
       </p>
     </div>
   </header>
@@ -64,9 +64,11 @@
       { id: '5', title: '5. árgangur', icon: '🍀' },
       { id: '6', title: '6. árgangur', icon: '🌲' },
       { id: '7', title: '7. árgangur', icon: '🌳' },
-      { id: '8', title: '8. árgangur', icon: '🎓' },
-      { id: '9', title: '9. árgangur', icon: '📘' },
-      { id: '10', title: '10. árgangur', icon: '🚀' },
+      { id: 'erlend', title: 'Erlend tungumál', icon: '🌐' },
+      { id: 'stf_ung', title: 'Stærðfræði (ungl.)', icon: '📐' },
+      { id: 'isl_ung', title: 'Íslenska (ungl.)', icon: '📖' },
+      { id: 'nattura', title: 'Náttúrufræði', icon: '🔬' },
+      { id: 'samfelag', title: 'Samfélagsfræði', icon: '🗺️' },
       { id: 'isat', title: 'ÍSAT', icon: '🌍' },
       { id: 'stod', title: 'Stoðþjónusta', icon: '🤝' }
     ];
@@ -84,14 +86,12 @@
                 <span class="text-lg">📖</span>
                 <h3 class="font-bold text-sky-900 text-base">Íslenska</h3>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Markmið</h4>
                 <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
                   Megintilgangur náms og kennslu í íslensku er að nemendur fái tækifæri til að efla málnotkun, tjáningu og sköpun í töluðu og rituðu máli, nota málið og kynnast mætti þess og fjölbreytileika í daglegu lífi, leik og starfi.
                 </p>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Hæfniviðmið</h4>
                 <ul class="list-disc pl-4 text-xs space-y-1 text-slate-600">
@@ -102,7 +102,6 @@
                   <li><strong>Mál & málnotkun:</strong> Þekkt einkenni málsins, rímað og farið í orðaleiki.</li>
                 </ul>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsefni</h4>
                 <ul class="list-disc pl-4 text-xs space-y-1 text-sky-700">
@@ -112,7 +111,6 @@
                   <li><a href="https://island.is/s/midstod-menntunar-og-skolathjonustu/leid-til-laesis-lesskimun-fyrir-1-bekk" target="_blank" class="hover:underline">Leið til læsis - lesskimun ↗</a></li>
                 </ul>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsmat</h4>
                 <p class="text-xs text-slate-600">Símat, verkefnavinna og lesfimi (3x á skólaári). Metið með matskvörðunum: <em>Hæfni náð</em>, <em>Á góðri leið</em>, <em>Þarfnast þjálfunar</em>.</p>
@@ -127,14 +125,12 @@
                 <span class="text-lg">📐</span>
                 <h3 class="font-bold text-sky-900 text-base">Stærðfræði</h3>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Markmið</h4>
                 <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
                   Megintilgangur náms og kennslu í stærðfræði er að nemendur öðlist alhliða hæfni og skilning til að nota stærðfræði sem verkfæri í fjölbreyttum tilgangi í daglegu lífi, leik og starfi.
                 </p>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Hæfniviðmið</h4>
                 <ul class="list-disc pl-4 text-xs space-y-1 text-slate-600">
@@ -142,7 +138,6 @@
                   <li><strong>Algebra:</strong> Kannar, býr til og tjáir sig um reglur í talnarunum og myndrænum mynstrum.</li>
                 </ul>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsefni</h4>
                 <ul class="list-disc pl-4 text-xs space-y-1 text-sky-700">
@@ -152,7 +147,6 @@
                   <li><a href="https://mms.is/namsefni/staerdfraedispaejarar-1-rafbok" target="_blank" class="hover:underline">Stærðfræðispæjarar 1 ↗</a></li>
                 </ul>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsmat</h4>
                 <p class="text-xs text-slate-600">Símat og verkefnavinna metin út frá hæfniviðmiðum.</p>
@@ -162,12 +156,8 @@
             <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
               <span class="text-xs text-slate-500 font-medium">Tengd þjónusta:</span>
               <div class="flex gap-2">
-                <button onclick="openTile('isat')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">
-                  🌍 ÍSAT stuðningur
-                </button>
-                <button onclick="openTile('stod')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">
-                  🤝 Stoðþjónusta
-                </button>
+                <button onclick="openTile('isat')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🌍 ÍSAT</button>
+                <button onclick="openTile('stod')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🤝 Stoðþjónusta</button>
               </div>
             </div>
           </div>
@@ -184,14 +174,12 @@
                 <span class="text-lg">📖</span>
                 <h3 class="font-bold text-sky-900 text-base">Íslenska</h3>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Markmið</h4>
                 <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
                   Megintilgangur náms og kennslu í íslensku er að nemendur fái tækifæri til að efla málnotkun, tjáningu og sköpun í töluðu og rituðu máli, nota málið og kynnast mætti þess og fjölbreytileika í daglegu lífi, leik og starfi.
                 </p>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Hæfniviðmið</h4>
                 <ul class="list-disc pl-4 text-xs space-y-1 text-slate-600">
@@ -202,7 +190,6 @@
                   <li><strong>Mál & málnotkun:</strong> Þekkt einkenni málsins, nýtt rím og orðaleiki og raðað í stafrófsröð við leit og skipulag.</li>
                 </ul>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsefni</h4>
                 <ul class="list-disc pl-4 text-xs space-y-1 text-sky-700">
@@ -214,7 +201,6 @@
                   <li>Lesskilnings- og hlustunarverkefni, iPad öpp og frjálsar lestrarbækur við hæfi hvers og eins.</li>
                 </ul>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsmat</h4>
                 <p class="text-xs text-slate-600">Reglulegt leiðsagnarmat, verkefnavinna og lesfimi þrisvar yfir skólaárið (september, janúar og maí). Metið út frá matskvörðunum: <em>Hæfni náð</em>, <em>Á góðri leið</em>, <em>Þarfnast þjálfunar</em>.</p>
@@ -229,14 +215,12 @@
                 <span class="text-lg">📐</span>
                 <h3 class="font-bold text-sky-900 text-base">Stærðfræði</h3>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Markmið</h4>
                 <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
                   Megintilgangur náms og kennslu í stærðfræði er að nemendur öðlist alhliða hæfni og skilning til að nota stærðfræði sem verkfæri í fjölbreyttum tilgangi í daglegu lífi, leik og starfi.
                 </p>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Hæfniviðmið</h4>
                 <ul class="list-disc pl-4 text-xs space-y-1 text-slate-600">
@@ -244,10 +228,9 @@
                   <li><strong>Tölur & reikningur:</strong> Raðar náttúrulegum tölum og brotum og beitir grunnreikniaðgerðum.</li>
                   <li><strong>Algebra:</strong> Kannar reglur í talnarunum/mynstrum, notar táknmál stærðfræðinnar og les úr myndritum.</li>
                   <li><strong>Tölfræði & líkindi:</strong> Safnar gögnum úr umhverfi sínu, flokkar, skráir og setur upp í myndrit.</li>
-                  <li><strong>Rúmfræði & mælingar:</strong> Teiknar og rannsakar með rúmfræðiforritum, mælir ummál/flatarmál, speglar/hliðrar og þekkir þrívíð form (tening, kúlu, keilu, sívalning, píramída, strendinga).</li>
+                  <li><strong>Rúmfræði & mælingar:</strong> Teiknar og rannsakar með rúmfræðiforritum, mælir ummál/flatarmál, speglar/hliðrar og þekkir þrívíð form.</li>
                 </ul>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsefni</h4>
                 <ul class="list-disc pl-4 text-xs space-y-1 text-sky-700">
@@ -257,7 +240,6 @@
                   <li>Hlutbundin gögn (talnagrindur, kubbar, kennslupeningar), spil, rökhugsunarþrautir og stærðfræðiöpp.</li>
                 </ul>
               </div>
-
               <div>
                 <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsmat</h4>
                 <p class="text-xs text-slate-600">Reglulegt leiðsagnarmat, stuttar kannanir úr hæfniþáttum og Sprotakannanir. Metið út frá matskvörðunum: <em>Hæfni náð</em>, <em>Á góðri leið</em>, <em>Þarfnast þjálfunar</em>.</p>
@@ -267,13 +249,451 @@
             <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
               <span class="text-xs text-slate-500 font-medium">Tengd þjónusta:</span>
               <div class="flex gap-2">
-                <button onclick="openTile('isat')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">
-                  🌍 ÍSAT stuðningur
-                </button>
-                <button onclick="openTile('stod')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">
-                  🤝 Stoðþjónusta
-                </button>
+                <button onclick="openTile('isat')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🌍 ÍSAT</button>
+                <button onclick="openTile('stod')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🤝 Stoðþjónusta</button>
               </div>
+            </div>
+          </div>
+        `
+      },
+      '3': {
+        title: '3. árgangur — Skólanámskrá',
+        icon: '🌿',
+        content: `
+          <div class="space-y-6 text-slate-700">
+            <!-- ÍSLENSKA -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                <span class="text-lg">📖</span>
+                <h3 class="font-bold text-sky-900 text-base">Íslenska</h3>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Markmið</h4>
+                <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
+                  Megintilgangur náms og kennslu í íslensku er að nemendur fái tækifæri til að efla málnotkun, tjáningu og sköpun í töluðu og rituðu máli.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Hæfniviðmið</h4>
+                <ul class="list-disc pl-4 text-xs space-y-1 text-slate-600">
+                  <li><strong>Talað mál & hlustun:</strong> Beita skýrum framburði, nýta og endurskrifa stafrænt efni, tjá sig frammi fyrir hópi.</li>
+                  <li><strong>Lestur & lesskilningur:</strong> Umskrift hljóða/stafa, draga ályktanir, velja og lesa sér til ánægju og efla orðaforða.</li>
+                  <li><strong>Bókmenntir:</strong> Vinna með ævintýri, sögur, ljóð og einfalda texta frá fyrri tímum.</li>
+                  <li><strong>Ritun:</strong> Skrifa læsilega og á lyklaborð, búa til málsgreinar með samtengingum og beita stafsetningsreglum.</li>
+                  <li><strong>Mál & málnotkun:</strong> Þekkja hlutverk nafnorða, lýsingarorða og sagnorða og raða í stafrófsröð.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsefni</h4>
+                <ul class="list-disc pl-4 text-xs space-y-1 text-sky-700">
+                  <li>Lestrarbækur af lestrarlista og bókasafni, hljóðlestrarbækur</li>
+                  <li>Ritrún 3, Lesrún, Skrift 2a og 2b (Ítalíuskrift), Blái blýanturinn, Setningar og málsgreinar</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsmat</h4>
+                <p class="text-xs text-slate-600">Lesfimi í september, janúar og maí. Símat í málfræði, skrift, ritun og kannanir.</p>
+              </div>
+            </div>
+
+            <hr class="border-slate-100" />
+
+            <!-- STÆRÐFRÆÐI -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                <span class="text-lg">📐</span>
+                <h3 class="font-bold text-sky-900 text-base">Stærðfræði</h3>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Hæfniviðmið</h4>
+                <ul class="list-disc pl-4 text-xs space-y-1 text-slate-600">
+                  <li><strong>Rúmfræði & mælingar:</strong> Lýsa hlutum, mæla massa/lengd/rúmmál/tíma/hitastig, lesa skífuklukku og stafræna klukku, mæla ummál og flatarmál, speglar/hliðra, þekkja þrívíð form.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsefni</h4>
+                <ul class="list-disc pl-4 text-xs space-y-1 text-sky-700">
+                  <li>Sproti 3a og 3b (Nemendabók og æfingahefti)</li>
+                  <li>Stærðfræðispæjarar, Evolytes 2 (Vinir í vanda)</li>
+                  <li>Margföldunarhefti 0-10, spil, rökhugsunarþrautir og hlutbundin gögn (talnagrindur, kubbar)</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsmat</h4>
+                <p class="text-xs text-slate-600">Símat, kaflapróf úr Sprota, leiðsagnarmat, verkefnavinna og kannanir á hæfniviðmiðum.</p>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs text-slate-500 font-medium">Tengd þjónusta:</span>
+              <div class="flex gap-2">
+                <button onclick="openTile('isat')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🌍 ÍSAT</button>
+                <button onclick="openTile('stod')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🤝 Stoðþjónusta</button>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      '4': {
+        title: '4. árgangur — Skólanámskrá',
+        icon: '☘️',
+        content: `
+          <div class="space-y-6 text-slate-700">
+            <!-- ÍSLENSKA -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                <span class="text-lg">📖</span>
+                <h3 class="font-bold text-sky-900 text-base">Íslenska</h3>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Markmið</h4>
+                <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
+                  Megintilgangur náms og kennslu í íslensku er að efla málnotkun, tjáningu og sköpun í töluðu og rituðu máli.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsefni</h4>
+                <ul class="list-disc pl-4 text-xs space-y-1 text-sky-700">
+                  <li>Setningar og málsgreinar 1, 2, 3, málsgreinar og mas 1, 2, 3</li>
+                  <li>Lesrún 1 og 2, Skinna 1, Könnum kortin 1 og 2</li>
+                  <li>Ítalíuskrift 4A og 4B, ljóð og söngvar, Skólavefurinn og MMS verkefni</li>
+                  <li>Lestrarbækur við hæfi hvers og eins</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsmat</h4>
+                <p class="text-xs text-slate-600">Símat á hæfnikorti í Mentor. Lesfimipróf 3x á ári (september, janúar, maí) og hliðarpróf (sjónrænn orðaforði/orðleysur). Stöðu- og framvindupróf í mars.</p>
+              </div>
+            </div>
+
+            <hr class="border-slate-100" />
+
+            <!-- STÆRÐFRÆÐI -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                <span class="text-lg">📐</span>
+                <h3 class="font-bold text-sky-900 text-base">Stærðfræði</h3>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsefni</h4>
+                <ul class="list-disc pl-4 text-xs space-y-1 text-sky-700">
+                  <li>Sproti 4a og 4b (Nemendabók og æfingahefti)</li>
+                  <li>Könnum kortin og Stærðfræðispæjarar</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsmat</h4>
+                <p class="text-xs text-slate-600">Símat og stuttar kaflakannanir. Stöðu- og framvindupróf í mars.</p>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs text-slate-500 font-medium">Tengd þjónusta:</span>
+              <div class="flex gap-2">
+                <button onclick="openTile('isat')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🌍 ÍSAT</button>
+                <button onclick="openTile('stod')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🤝 Stoðþjónusta</button>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      '5': {
+        title: '5. árgangur — Skólanámskrá',
+        icon: '🍀',
+        content: `
+          <div class="space-y-6 text-slate-700">
+            <!-- ÍSLENSKA -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                <span class="text-lg">📖</span>
+                <h3 class="font-bold text-sky-900 text-base">Íslenska</h3>
+              </div>
+              <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
+                Aðalmarkmið náms og kennslu í íslensku er að efla málnotkun, tjáningu, ritun og lesskilning í töluðu og rituðu máli.
+              </p>
+            </div>
+
+            <hr class="border-slate-100" />
+
+            <!-- STÆRÐFRÆÐI -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                <span class="text-lg">📐</span>
+                <h3 class="font-bold text-sky-900 text-base">Stærðfræði</h3>
+              </div>
+              <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
+                Aðalmarkmið er að nemendur öðlist alhliða hæfni til að nota stærðfræði sem verkfæri í lausnaleit og daglega lífi.
+              </p>
+            </div>
+
+            <hr class="border-slate-100" />
+
+            <!-- ENSKA -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                <span class="text-lg">🇬🇧</span>
+                <h3 class="font-bold text-sky-900 text-base">Enska</h3>
+              </div>
+              <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
+                Tungumálanám veitir nemendum tækifæri til að rækta með sér tilfinningu fyrir alþjóðlegum samskiptum og menningu. Megintilgangur er að nemendur öðlist hæfni til að nota ensku sem lifandi verkfæri.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs text-slate-500 font-medium">Tengd þjónusta:</span>
+              <div class="flex gap-2">
+                <button onclick="openTile('isat')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🌍 ÍSAT</button>
+                <button onclick="openTile('stod')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🤝 Stoðþjónusta</button>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      '6': {
+        title: '6. árgangur — Skólanámskrá',
+        icon: '🌲',
+        content: `
+          <div class="space-y-6 text-slate-700">
+            <!-- ÍSLENSKA -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                <span class="text-lg">📖</span>
+                <h3 class="font-bold text-sky-900 text-base">Íslenska</h3>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Hæfniviðmið</h4>
+                <ul class="list-disc pl-4 text-xs space-y-1 text-slate-600">
+                  <li><strong>Talað mál & hlustun:</strong> Flytja mál sitt skýrt, tjá skoðanir frammi fyrir hópi og nýta stafrænt efni af gagnrýni.</li>
+                  <li><strong>Lestur & lesskilningur:</strong> Lesa nákvæmlega með tjáningu, beita orðaforða og draga saman efni.</li>
+                  <li><strong>Ritun:</strong> Skrifa texta með fjölbreyttum málsgreinum og efnisgreinum, tjá sköpun og beita stafsetningu.</li>
+                  <li><strong>Mál & málnotkun:</strong> Greina sagnorð, fallorð og óbeygjanleg orð, nota orðatök og fletta upp í orðabókum.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Kennsluáætlun & Lotur</h4>
+                <ul class="list-disc pl-4 text-xs space-y-1 text-slate-600">
+                  <li><strong>Allan veturinn:</strong> Heimalestur 5x20 mín/viku, PALS 2x í viku, Yndislestur 3x í viku, Lesfimipróf (3x á ári).</li>
+                  <li><strong>Lota 1:</strong> Orðspor (málfræði), Annar smellur (lesskilningur), Söguskinna (flökkusögur & ritun).</li>
+                  <li><strong>Lota 2:</strong> Bókaklúbbar í <em>PóGó – prumpið sem bjargaði heiminum</em> eftir Bergrúnu Írisi Sævarsdóttir.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsmat</h4>
+                <p class="text-xs text-slate-600">Leiðsagnarmat, vinnubók, jafningjamat í hópavinnu og sjálfsmat í einstaklingsvinnu.</p>
+              </div>
+            </div>
+
+            <hr class="border-slate-100" />
+
+            <!-- STÆRÐFRÆÐI -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                <span class="text-lg">📐</span>
+                <h3 class="font-bold text-sky-900 text-base">Stærðfræði</h3>
+              </div>
+              <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
+                Aðalmarkmið er að efla alhliða hæfni nemenda til að finna, skapa, tjá og útskýra regluleika, lögmál og mynstur.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs text-slate-500 font-medium">Tengd þjónusta:</span>
+              <div class="flex gap-2">
+                <button onclick="openTile('isat')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🌍 ÍSAT</button>
+                <button onclick="openTile('stod')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🤝 Stoðþjónusta</button>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      '7': {
+        title: '7. árgangur — Skólanámskrá',
+        icon: '🌳',
+        content: `
+          <div class="space-y-6 text-slate-700">
+            <!-- ÍSLENSKA -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                <span class="text-lg">📖</span>
+                <h3 class="font-bold text-sky-900 text-base">Íslenska</h3>
+              </div>
+              <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
+                Aðalmarkmið náms og kennslu í íslensku er að nemendur fái tækifæri til að efla málnotkun, tjáningu og sköpun í töluðu og rituðu máli.
+              </p>
+            </div>
+
+            <hr class="border-slate-100" />
+
+            <!-- STÆRÐFRÆÐI -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                <span class="text-lg">📐</span>
+                <h3 class="font-bold text-sky-900 text-base">Stærðfræði</h3>
+              </div>
+              <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
+                Aðalmarkmið er að nemendur öðlist alhliða hæfni og skilning til að nota stærðfræði sem verkfæri í ólíkum aðstæðum.
+              </p>
+            </div>
+
+            <hr class="border-slate-100" />
+
+            <!-- DANSKA -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                <span class="text-lg">🇩🇰</span>
+                <h3 class="font-bold text-sky-900 text-base">Danska</h3>
+              </div>
+              <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
+                Danska eða annað Norðurlandamál er kennt vegna samskipta og menningartengsla við Norðurlöndin.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs text-slate-500 font-medium">Tengd þjónusta:</span>
+              <div class="flex gap-2">
+                <button onclick="openTile('isat')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🌍 ÍSAT</button>
+                <button onclick="openTile('stod')" class="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded-xl text-xs font-semibold transition">🤝 Stoðþjónusta</button>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      'erlend': {
+        title: 'Erlend tungumál — Unglingastig (8.–10. árg.)',
+        icon: '🌐',
+        content: `
+          <div class="space-y-6 text-slate-700">
+            <div>
+              <h4 class="font-bold text-sky-900 text-sm mb-1">Skipulag kennslu í ensku og dönsku</h4>
+              <p class="text-xs text-slate-600">
+                Enska og danska eru kenndar saman á unglingastigi og eru verkefni lögð fyrir í 2–4 vikna lotum. Kenndar eru 7 kennslustundir á viku í erlendum tungumálum (4 stundir í ensku og 3 stundir í dönsku).
+              </p>
+            </div>
+
+            <!-- 8. ÁRGANGUR -->
+            <div class="space-y-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
+              <h4 class="font-bold text-xs text-slate-800 uppercase">8. árgangur</h4>
+              <ul class="list-disc pl-4 text-xs space-y-1 text-slate-600">
+                <li><strong>Enska:</strong> Next Up (les- og vinnubók), léttlestrarbækur, <em>Billy Elliot</em>, kvikmyndir og vefefni.</li>
+                <li><strong>Danska:</strong> Tak (les- og vinnubók), léttlestrarbækur, kvikmyndir, þættir og vefefni.</li>
+              </ul>
+            </div>
+
+            <!-- 9. ÁRGANGUR -->
+            <div class="space-y-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
+              <h4 class="font-bold text-xs text-slate-800 uppercase">9. árgangur</h4>
+              <ul class="list-disc pl-4 text-xs space-y-1 text-slate-600">
+                <li><strong>Enska:</strong> Next Up, léttlestrarbækur, skáldsagan <em>Holes</em>, kvikmyndir og vefefni.</li>
+                <li><strong>Danska:</strong> Tak lesbók, Tak B vinnubók, léttlestrarbækur, kvikmyndir og vefefni.</li>
+              </ul>
+            </div>
+
+            <!-- 10. ÁRGANGUR -->
+            <div class="space-y-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
+              <h4 class="font-bold text-xs text-slate-800 uppercase">10. árgangur</h4>
+              <ul class="list-disc pl-4 text-xs space-y-1 text-slate-600">
+                <li><strong>Enska:</strong> Next Up, <em>The Hobbit</em>, aðrar bókmenntir, kvikmyndir og vandað vefefni.</li>
+                <li><strong>Danska:</strong> Tematísk efnistök, léttlestrarbækur og sjálfstæð verkefnavinna.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsmat</h4>
+              <p class="text-xs text-slate-600">
+                Símat fer fram á Mentor. Gefin eru lokaeinkunn eða einkunnir (A, B+, B, C+, C, D). Ef nemandi nær ekki hæfni býðst honum að uppfæra eða endurvinna verkefni til að þjálfa sig og hækka einkunn.
+              </p>
+            </div>
+          </div>
+        `
+      },
+      'stf_ung': {
+        title: 'Stærðfræði — Unglingastig (8.–10. árg.)',
+        icon: '📐',
+        content: `
+          <div class="space-y-5 text-slate-700">
+            <div>
+              <h4 class="font-bold text-sky-900 text-sm mb-1">Markmið</h4>
+              <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
+                Stærðfræði er mikilvæg leið til að ígrunda, skapa merkingu og skilja náttúru, samfélag, efnahag, tækni og stafræna þróun. Megintilgangur náms er að nemendur öðlist alhliða hæfni til að beita stærðfræði sem verkfæri í ólíkum aðstæðum.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Áherslur á unglingastigi</h4>
+              <ul class="list-disc pl-4 text-xs space-y-1 text-slate-600">
+                <li>Vinnulag, samræður um lausnaleiðir og rétt beiting stærðfræðitákna.</li>
+                <li>Algebra, jöfnur, tölfræði, líkindi, rúmfræði og hagnýttar mælingar.</li>
+                <li>Beiting stafrænna tækja, hugbúnaðar og forritunar til rannsókna og útreikninga.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsmat</h4>
+              <p class="text-xs text-slate-600">Símat, kaflapróf, vinnubækur og reglulegt leiðsagnarmat á Mentor.</p>
+            </div>
+          </div>
+        `
+      },
+      'isl_ung': {
+        title: 'Íslenska — Unglingastig (8.–10. árg.)',
+        icon: '📖',
+        content: `
+          <div class="space-y-5 text-slate-700">
+            <div>
+              <h4 class="font-bold text-sky-900 text-sm mb-1">Markmið</h4>
+              <p class="text-xs text-slate-600 italic bg-slate-50 p-3 rounded-xl border border-slate-100">
+                Megintilgangur náms og kennslu í íslensku er að nemendur efli málnotkun, tjáningu, ritun og sköpun í töluðu og rituðu máli, ásamt því að kynnast fjölbreyttum bókmenntum og málfræði.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Aðalþættir námsins</h4>
+              <ul class="list-disc pl-4 text-xs space-y-1 text-slate-600">
+                <li><strong>Talað mál & hlustun:</strong> Framsögn, rökræður og flutningur frammi fyrir hópi.</li>
+                <li><strong>Lestur & lesskilningur:</strong> Djúplestur, greining texta, orðaforði og sjálfstæður yndislestur.</li>
+                <li><strong>Ritun & málfræði:</strong> Ritmál, ritgerðasmíð, stafsetning, greinarmerki og málfræðigreining.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsmat</h4>
+              <p class="text-xs text-slate-600">Símat út frá ritunarverkefnum, bókmenntaverkefnum, málfræðiprófum og lesfimi.</p>
+            </div>
+          </div>
+        `
+      },
+      'nattura': {
+        title: 'Náttúrufræði — Unglingastig',
+        icon: '🔬',
+        content: `
+          <div class="space-y-5 text-slate-700">
+            <div>
+              <h4 class="font-bold text-sky-900 text-sm mb-1">Markmið og áherslur</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Kennsla í náttúrufræði tekur til eðlisfræði, efnafræði, líffræði og jarðvísinda. Lögð er áhersla á vísindalega hugsun, tilraunir, umhverfislæsi og sjálfbærni.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsform & mat</h4>
+              <p class="text-xs text-slate-600">Verkefnavinna, tilraunaskýrslur, hópvinna og símat á Mentor.</p>
+            </div>
+          </div>
+        `
+      },
+      'samfelag': {
+        title: 'Samfélagsfræði — Unglingastig',
+        icon: '🗺️',
+        content: `
+          <div class="space-y-5 text-slate-700">
+            <div>
+              <h4 class="font-bold text-sky-900 text-sm mb-1">Markmið og áherslur</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Í samfélagsfræði er unnið með sögu, landafræði, samfélagsfræði, lýðræði og mannréttindi. Nemendur þjálfast í gagnrýninni hugsun og skilningi á samfélaginu.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-1">Námsform & mat</h4>
+              <p class="text-xs text-slate-600">Verkefnalotur, kynningar, umræður og símat á Mentor.</p>
             </div>
           </div>
         `
@@ -284,19 +704,8 @@
         content: `
           <div class="space-y-4">
             <p class="text-xs text-slate-600 leading-relaxed">ÍSAT veitir nemendum með annað móðurmál en íslensku málörvun og einstaklingsbundinn stuðning.</p>
-            
             <div class="p-3 bg-sky-50 rounded-xl border border-sky-100 text-xs text-sky-950 space-y-1">
               <strong>Skipulag kennslu:</strong> Kennsla fer fram í litlum hópum eða innan bekkjar í samstarfi við umsjónarkennara.
-            </div>
-
-            <div class="pt-2 border-t border-slate-100 space-y-2">
-              <span class="text-xs font-semibold text-slate-500 block">Skoða námsáætlanir árganga:</span>
-              <div class="flex flex-wrap gap-1.5">
-                <button onclick="openTile('1')" class="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium rounded-lg">1. árg</button>
-                <button onclick="openTile('2')" class="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium rounded-lg">2. árg</button>
-                <button onclick="openTile('7')" class="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium rounded-lg">7. árg</button>
-                <button onclick="openTile('10')" class="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium rounded-lg">10. árg</button>
-              </div>
             </div>
           </div>
         `
@@ -307,7 +716,6 @@
         content: `
           <div class="space-y-4">
             <p class="text-xs text-slate-600 leading-relaxed">Stoðþjónusta nær yfir sérkennslu, námsráðgjöf, skólaheilsuvernd og sálfræðiþjónustu.</p>
-            
             <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs text-slate-700 space-y-1">
               <strong>Tilvísunarferli:</strong> Umsóknir og tilvísanir um sérstakan stuðning í kennslu.
             </div>
@@ -329,14 +737,11 @@
     function openTile(id) {
       const item = TILES_DATA[id];
       
-      const title = item ? item.title : `${id}. árgangur`;
+      const title = item ? item.title : `${id}`;
       const icon = item ? item.icon : '📚';
       const content = item ? item.content : `
         <div class="space-y-3">
-          <p class="text-xs text-slate-600">Námskrá og námsáætlanir fyrir ${id}. árgang eru í vinnslu.</p>
-          <div class="p-4 bg-sky-50/50 border border-sky-100 rounded-2xl text-xs text-sky-900">
-            Hér munu koma markmið, hæfniviðmið, námsefni og námsmat fyrir ${id}. árgang.
-          </div>
+          <p class="text-xs text-slate-600">Upplýsingar og námsáætlanir eru í vinnslu.</p>
         </div>
       `;
 
